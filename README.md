@@ -52,7 +52,7 @@ $ curl -s "https://get.sdkman.io" | bash
 ```
 
 <details>
-<summary><h4>Java SDK installation via SDKMAN</h4></summary>
+<summary><h4>Java JDK installation via SDKMAN</h4></summary>
 Before running the next set of commands, please ensure that your .zprofile is updated 
 with the profile in this repo.
 
