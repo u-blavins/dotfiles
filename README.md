@@ -81,3 +81,18 @@ java8
 ```
 
 </details>
+
+### JavaScript
+- [nvm](https://formulae.brew.sh/formula/nvm)
+
+```shell
+brew install nvm
+```
+
+### AWS CLI
+
+- [aws cli](https://formulae.brew.sh/formula/awscli)
+
+```shell
+brew install awscli
+```
