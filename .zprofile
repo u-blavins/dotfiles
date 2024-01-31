@@ -17,3 +17,4 @@ alias java21="sdk use java 21.0.2-amzn"
 
 alias node16="nvm use 16.20.2"
 alias node18="nvm use 18.19.0"
+alias node20="nvm use 20.11.0"
