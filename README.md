@@ -19,6 +19,7 @@ Repository containing dotfiles used for workspace setups
 brew install pyenv
 brew install pipenv
 brew install xz
+brew install pre-commit
 ```
 <details>
 <summary><h4>Python installation via Pyenv</h4></summary>

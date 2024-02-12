@@ -2,6 +2,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PATH:/Users/jetbrains/.local/bin"
 eval "$(pyenv init --path)"
 
 export SDKMAN_DIR="$HOME/.sdkman"
