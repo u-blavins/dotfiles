@@ -93,7 +93,20 @@ brew install nvm
 ### AWS CLI
 
 - [aws cli](https://formulae.brew.sh/formula/awscli)
+- [aws-vault](https://formulae.brew.sh/formula/aws-vault)
 
 ```shell
 brew install awscli
+brew install aws-vault
+```
+
+### Dotnet
+
+- [dotnet-sdk-versions](https://github.com/isen-ng/homebrew-dotnet-sdk-versions?tab=readme-ov-file)
+
+```shell
+brew tap isen-ng/dotnet-sdk-versions
+brew install --cask <version> # dotnet-sdk8-0-200 and dotnet-sdk6-0-400
+
+dotnet --list-sdks
 ```
