@@ -100,6 +100,20 @@ brew install awscli
 brew install aws-vault
 ```
 
+### Terraform
+
+- [tfenv](https://formulae.brew.sh/formula/tfenv)
+
+```shell
+brew install tfenv
+
+tfenv list-remote # get list of remote versions of terraform
+tfenv install <version>
+tfenv use <version>
+
+terraform --version
+```
+
 ### Dotnet
 
 - [dotnet-sdk-versions](https://github.com/isen-ng/homebrew-dotnet-sdk-versions?tab=readme-ov-file)
