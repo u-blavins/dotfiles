@@ -25,8 +25,15 @@ brew "aws-vault"
 brew "circleci"
 brew "tfenv"
 
+# Containers (open-source, free for personal & commercial use)
+brew "colima"
+brew "docker"
+brew "docker-compose"
+# Requires license for commercial/business use — personal use only:
+# cask "docker-desktop"
+# cask "orbstack"
+
 # Casks
-cask "docker-desktop"
 tap "isen-ng/dotnet-sdk-versions"
 cask "dotnet-sdk8-0-200"
 
