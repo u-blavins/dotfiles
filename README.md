@@ -11,31 +11,24 @@ Repository containing dotfiles used for workspace setups
 ```
 
 ### Python
-- [pyenv](https://formulae.brew.sh/formula/pyenv) (python environment)
-- [pipenv](https://formulae.brew.sh/formula/pipenv) (pip environment manager)
-- [xz](https://formulae.brew.sh/formula/xz) (required for recent python versions)
+- [uv](https://docs.astral.sh/uv/) (Python version, package, and project manager)
+- [pre-commit](https://formulae.brew.sh/formula/pre-commit)
 
 ```shell
-brew install pyenv
-brew install pipenv
-brew install xz
+brew install uv
 brew install pre-commit
 ```
 <details>
-<summary><h4>Python installation via Pyenv</h4></summary>
-Before running the next set of commands, please ensure that your .zprofile is updated 
-with the profile in this repo.
+<summary><h4>Python management via uv</h4></summary>
 
 ```shell
-pyenv install --list | grep 3.X  <-- find Python version available
-pyenv install 3.X.X  <-- install Python version through pyenv
-pyenv versions  <-- see versions of Python installed
-pyenv global 3.X.X  <-- set the Python version globally to an installed version of Python
+uv python list                  # see available and installed Python versions
+uv python install 3.14          # install Python 3.14
+uv python pin 3.14              # pin Python version for a project (.python-version)
+uv venv --python 3.14           # create a virtual environment
+uv run python script.py         # run using the pinned Python version
+uvx ruff check .                # run ruff without installing globally
 ```
-
-You can verify the Python version by doing:
-
-`python --version` or `python3 --version`
 </details>
 
 ### Golang
@@ -62,23 +55,22 @@ sdk list java | grep amzn  <-- find Java Corretto JDK versions available
 sdk install java {Identifier}  <-- install Java Corretto JDK version i.e. 8.0.402-amzn
 ```
 
-In the `.zprofile`, there are aliases for Java 8, 11, 17, 21. They can be modified by installing
+In the `.zprofile`, there are aliases for Java 17, 21, and 25 (Amazon Corretto LTS). They can be modified by installing
 the preferred version and updating the `.zprofile`. If using the provided profile, run the 
 following:
 
 ```shell
-sdk install java 8.0.402-amzn
-sdk install java 11.0.22-amzn
-sdk install java 17.0.10-amzn
-sdk install java 21.0.2-amzn
+sdk install java 17.0.21.1.2-amzn
+sdk install java 21.0.13.1.2-amzn
+sdk install java 25.0.5.1.2-amzn
 ```
 
-Then switch Java versions by entering `java8`, `java11`, `java17`, `java21`:
+Then switch Java versions by entering `java17`, `java21`, `java25`:
 
 ```shell
-java8
+java21
 
-> Using java version 8.0.402-amzn in this shell.
+> Using java version 21.0.13.1.2-amzn in this shell.
 ```
 
 </details>
@@ -123,4 +115,16 @@ brew tap isen-ng/dotnet-sdk-versions
 brew install --cask <version> # dotnet-sdk8-0-200 and dotnet-sdk6-0-400
 
 dotnet --list-sdks
+```
+
+### CLI & Dev Tools
+
+```shell
+brew install starship fzf ripgrep fd jq yq git-delta bat
+```
+
+Or install everything in one shot with the included `Brewfile`:
+
+```shell
+brew bundle --file=Brewfile
 ```
